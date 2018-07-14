@@ -1,0 +1,45 @@
+<!doctype html><!--声明当前文档的类型-->
+<html lang="en">
+    <head>
+        <!--中文编码 GBK GB2312  国际编码UTF-8-->
+        <meta http-equiv ="content-type" content="texe/html" charset="UTF-8">
+        <!--声明当前页面的三要素-->
+        <meta name="Keywords" content="关键字，关键词">
+        <meta name="Description" content="描述和简介">
+        <title>效果演示</title>
+        <style type="text/css">
+            /* web自带样式初始化 */
+            *{margin:0px;padding:0px;}
+            ol,ul{list-style:none;}
+            a{text-decoration:none;}
+            img{border:none;}
+
+            body{font-size:12px;font-family:"微软雅黑";color:#666;background:#000;}
+            body,html{width: 100%;height: 100%;}
+            #warp{
+                width: 100%;
+                height: 100%;
+            }
+            video{
+                width: 100%;
+                height: 100%;
+            }
+                    </style>
+        <!-- <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> -->
+    </head>
+<body>
+    <div id="warp">
+        <video controls="controls" autoplay="autoplay" src="../文件/2.钢琴/vvvv.mp4"></video>
+    </div>
+    <script>
+        window.onload=function(){
+            console.log(location);
+            var index=location.search.split('?')[1];
+
+            var oVideo=document.querySelector('video');
+
+            oVideo.src=index!='07'?index+'.mp4':index+'.mov';
+        }
+    </script>
+</body>
+</html>
